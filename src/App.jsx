@@ -2,7 +2,7 @@ import { io } from "socket.io-client";
 import { useEffect, useRef, useState } from "react";
 import { Send } from "lucide-react";
 
-const socket = io("http://localhost:8000");
+const socket = io("https://chat-backend-nq8f.onrender.com/");
 
 export default function App() {
   const [message, setMessage] = useState("");
