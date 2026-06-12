@@ -182,7 +182,7 @@ export default function App() {
             <Send size={18} />
           </button>
         </form>
-        <p className="text-white">Develop by md shimul hossen</p>
+        <p className="text-white">Develop by MD SHIMUL</p>
       </div>
     </div>
   );
