@@ -82,9 +82,7 @@ export default function App() {
 
             <div>
               <h2 className="text-white font-semibold text-lg">Room Chat</h2>
-              <p className="text-sm text-slate-400">Connected to room1</p>
             </div>
-            <p>Develop by md shimul hossen</p>
           </div>
         </div>
 
@@ -184,6 +182,7 @@ export default function App() {
             <Send size={18} />
           </button>
         </form>
+        <p className="text-white">Develop by md shimul hossen</p>
       </div>
     </div>
   );
