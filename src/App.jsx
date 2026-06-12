@@ -191,7 +191,7 @@ export default function App() {
         </span>
 
         <span className="text-xs font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent tracking-wider">
-          MD SHIMUL
+          MD SHIMUL HOSSEN
         </span>
       </footer>
     </div>
