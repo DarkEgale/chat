@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 import { useEffect, useRef, useState } from "react";
-import { Send } from "lucide-react";
+import { Send, Code2, Heart } from "lucide-react"; // বাড়তি আইকন যোগ করা হয়েছে
 
 const socket = io("https://chat-backend-nq8f.onrender.com/");
 
@@ -67,7 +67,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 flex flex-col items-center justify-center p-4 gap-4">
+      {/* Chat Main Window */}
       <div className="w-full max-w-4xl h-[85vh] rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl">
         {/* Header */}
         <div className="h-20 px-6 flex items-center justify-between border-b border-white/10 bg-white/5">
@@ -76,10 +77,8 @@ export default function App() {
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg">
                 R
               </div>
-
               <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-slate-900" />
             </div>
-
             <div>
               <h2 className="text-white font-semibold text-lg">Room Chat</h2>
             </div>
@@ -113,7 +112,6 @@ export default function App() {
                   }`}
                 >
                   <p className="break-words">{msg.text}</p>
-
                   <p
                     className={`text-[10px] mt-1 ${
                       msg.sender === "me" ? "text-indigo-100" : "text-slate-400"
@@ -128,11 +126,10 @@ export default function App() {
               </div>
             ))
           )}
-
           <div ref={bottomRef} />
         </div>
 
-        {/* Input */}
+        {/* Input Form */}
         <form
           onSubmit={handleMessage}
           className="h-[60px] border-t border-white/10 bg-white/5 px-4 flex items-center gap-3"
@@ -159,7 +156,6 @@ export default function App() {
               transition-all
             "
           />
-
           <button
             type="submit"
             className="
@@ -183,7 +179,21 @@ export default function App() {
           </button>
         </form>
       </div>
-      <p className="text-white">Develop by MD SHIMUL</p>
+
+      {/* --- সুন্দর ও স্টাইলিশ ডেভেলপার ইনফরমেশন ফুটার --- */}
+      <footer className="flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-lg transition-all hover:bg-white/10 group">
+        <Code2
+          size={14}
+          className="text-indigo-400 group-hover:rotate-12 transition-transform"
+        />
+        <span className="text-xs text-slate-400 font-medium tracking-wide">
+          Developed by
+        </span>
+
+        <span className="text-xs font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent tracking-wider">
+          MD SHIMUL
+        </span>
+      </footer>
     </div>
   );
 }
