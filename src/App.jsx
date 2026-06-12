@@ -84,6 +84,7 @@ export default function App() {
               <h2 className="text-white font-semibold text-lg">Room Chat</h2>
               <p className="text-sm text-slate-400">Connected to room1</p>
             </div>
+            <p>Develop by md shimul hossen</p>
           </div>
         </div>
 
